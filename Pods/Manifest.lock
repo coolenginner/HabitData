@@ -1,0 +1,40 @@
+PODS:
+  - Alamofire (5.2.2)
+  - HabitAnalytics (2.1):
+    - Alamofire (= 5.2.2)
+    - KeychainAccess (= 4.2.1)
+    - Mixpanel-swift (= 2.7.7)
+    - RealmSwift (= 5.4.1)
+  - KeychainAccess (4.2.1)
+  - Mixpanel-swift (2.7.7):
+    - Mixpanel-swift/Complete (= 2.7.7)
+  - Mixpanel-swift/Complete (2.7.7)
+  - Realm (5.4.1):
+    - Realm/Headers (= 5.4.1)
+  - Realm/Headers (5.4.1)
+  - RealmSwift (5.4.1):
+    - Realm (= 5.4.1)
+
+DEPENDENCIES:
+  - HabitAnalytics (= 2.1)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - HabitAnalytics
+    - KeychainAccess
+    - Mixpanel-swift
+    - Realm
+    - RealmSwift
+
+SPEC CHECKSUMS:
+  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
+  HabitAnalytics: d5ebbf1ee63f6d4bed889465baf114dba9551f02
+  KeychainAccess: 9b07f665298d13c3a85881bd3171f6f49b8151c1
+  Mixpanel-swift: 3a8fb9ce791e9c64d556b9446aa470b469c6fa7d
+  Realm: 7e887608ef1de2d0c3a33dd9b1449e08fc9d9807
+  RealmSwift: ef998d9b678fd74e047c56ef4d99d9b77e87c1eb
+
+PODFILE CHECKSUM: 5c15b1b9389f4e499b4bfa4b0714e186c40c66bc
+
+COCOAPODS: 1.9.1

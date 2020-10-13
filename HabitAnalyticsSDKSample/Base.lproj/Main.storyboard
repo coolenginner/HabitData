@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Habit_Data" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view hidden="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UcI-ae-24X">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="TRW-zR-HWi">
+                                        <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="TRW-zR-HWi" firstAttribute="centerX" secondItem="UcI-ae-24X" secondAttribute="centerX" id="fE4-Y0-n6z"/>
+                                    <constraint firstItem="TRW-zR-HWi" firstAttribute="centerY" secondItem="UcI-ae-24X" secondAttribute="centerY" id="kvk-8T-I6P"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="vrr-Tf-rOc">
+                                <rect key="frame" x="20" y="64" width="374" height="818"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="EUX-v6-26h">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pKb-gB-kit">
+                                                <rect key="frame" x="0.0" y="0.0" width="57.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Disabled" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CNe-Fz-MyU">
+                                                <rect key="frame" x="72.5" y="0.0" width="301.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CvN-NC-0Uc">
+                                        <rect key="frame" x="0.0" y="35.5" width="374" height="40"/>
+                                        <color key="backgroundColor" red="0.42600235339999998" green="0.48677110670000001" blue="0.63140672450000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="qqC-NQ-y66"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Initialize"/>
+                                        <connections>
+                                            <action selector="uiBtInitialize_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XOt-j6-Jw6"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="External ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eiQ-bp-off">
+                                        <rect key="frame" x="0.0" y="90.5" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YCb-Iw-nq1">
+                                        <rect key="frame" x="0.0" y="139.5" width="374" height="40"/>
+                                        <color key="backgroundColor" red="0.42600235339999998" green="0.48677110670000001" blue="0.63140672450000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="ILu-cn-LEi"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Set external ID"/>
+                                        <connections>
+                                            <action selector="uiBtSetExternalID_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8xG-ue-6iX"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enabled Capabilities:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w5c-j5-Vrt">
+                                        <rect key="frame" x="0.0" y="194.5" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="FQc-Rb-rci">
+                                        <rect key="frame" x="0.0" y="230" width="374" height="75"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="P8e-zO-y02">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zgl-fc-i8g">
+                                                        <rect key="frame" x="0.0" y="0.0" width="218" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="heZ-gr-mSn">
+                                                        <rect key="frame" x="243" y="0.0" width="51" height="30"/>
+                                                        <connections>
+                                                            <action selector="uiSwitchLocation_ValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="HJ7-cA-r7u"/>
+                                                        </connections>
+                                                    </switch>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lAp-z2-ocm">
+                                                        <rect key="frame" x="317" y="0.0" width="57" height="30"/>
+                                                        <state key="normal" title="Request"/>
+                                                        <connections>
+                                                            <action selector="uiBtRequestLocation_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nSm-VL-0at"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="jf0-iR-HF1">
+                                                <rect key="frame" x="0.0" y="45" width="374" height="30"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" text="Bluetooth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZb-A3-bYg">
+                                                        <rect key="frame" x="0.0" y="0.0" width="218" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="53y-EK-G7J">
+                                                        <rect key="frame" x="243" y="0.0" width="51" height="30"/>
+                                                        <connections>
+                                                            <action selector="uiSwitchBluetooth_ValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="OUK-go-sIT"/>
+                                                        </connections>
+                                                    </switch>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nfc-VW-XfR">
+                                                        <rect key="frame" x="317" y="0.0" width="57" height="30"/>
+                                                        <state key="normal" title="Request"/>
+                                                        <connections>
+                                                            <action selector="uiBtRequestBluetooth_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mRu-eN-qT6"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stored Events: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDs-pQ-kJK">
+                                        <rect key="frame" x="0.0" y="320" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Wf-Ev-kuG">
+                                        <rect key="frame" x="0.0" y="355.5" width="374" height="40"/>
+                                        <color key="backgroundColor" red="0.42600235339999998" green="0.48677110670000001" blue="0.63140672450000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="hEd-6h-awp"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Update Stored Events"/>
+                                        <connections>
+                                            <action selector="uiBtTrack_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d5I-vh-aLA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ef-RF-Kc3">
+                                        <rect key="frame" x="0.0" y="410.5" width="374" height="40"/>
+                                        <color key="backgroundColor" red="0.42600235342979431" green="0.4867711067199707" blue="0.63140672445297241" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="flH-3K-wem"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Sign out"/>
+                                        <connections>
+                                            <action selector="uiBtSignOut_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="742-B2-YCU"/>
+                                        </connections>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rRN-GT-Lb3">
+                                        <rect key="frame" x="0.0" y="465.5" width="374" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="lXU-Yp-M2k"/>
+                                        </constraints>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <view contentMode="scaleToFill" horizontalHuggingPriority="254" verticalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="umk-cP-ral">
+                                        <rect key="frame" x="0.0" y="580.5" width="374" height="237.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vrr-Tf-rOc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0d9-x1-LPB"/>
+                            <constraint firstItem="UcI-ae-24X" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3bj-zi-YqX"/>
+                            <constraint firstItem="vrr-Tf-rOc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-20" id="BN8-ON-9e8"/>
+                            <constraint firstItem="vrr-Tf-rOc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="DeT-qC-tI8"/>
+                            <constraint firstItem="UcI-ae-24X" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="FuB-6v-VLk"/>
+                            <constraint firstItem="UcI-ae-24X" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ldt-Jp-UQE"/>
+                            <constraint firstAttribute="bottom" secondItem="UcI-ae-24X" secondAttribute="bottom" id="nbL-w0-owk"/>
+                            <constraint firstItem="vrr-Tf-rOc" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="20" id="xmK-qf-Rph"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="txtLogs" destination="rRN-GT-Lb3" id="uet-QR-fUT"/>
+                        <outlet property="uiBtInitialize" destination="CvN-NC-0Uc" id="kP8-jy-mPU"/>
+                        <outlet property="uiBtRequestBluetooth" destination="Nfc-VW-XfR" id="4vu-s9-xCE"/>
+                        <outlet property="uiBtRequestLocation" destination="lAp-z2-ocm" id="Oni-FS-9Dk"/>
+                        <outlet property="uiBtSetExternalID" destination="YCb-Iw-nq1" id="FIA-QC-XEK"/>
+                        <outlet property="uiBtSignOut" destination="4ef-RF-Kc3" id="nGs-26-OG5"/>
+                        <outlet property="uiBtTrack" destination="5Wf-Ev-kuG" id="nhc-tZ-31P"/>
+                        <outlet property="uiLbLoggedInStatus" destination="CNe-Fz-MyU" id="7XX-6L-Van"/>
+                        <outlet property="uiLbNumberStoredEvents" destination="oDs-pQ-kJK" id="B0b-Bg-13S"/>
+                        <outlet property="uiLoadingView" destination="UcI-ae-24X" id="igp-lR-5JX"/>
+                        <outlet property="uiSwitchBluetooth" destination="53y-EK-G7J" id="lgu-hW-vaP"/>
+                        <outlet property="uiSwitchLocation" destination="heZ-gr-mSn" id="JNx-Wc-bwV"/>
+                        <outlet property="uiTfExternalID" destination="eiQ-bp-off" id="2RR-hR-v2V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="111.59420289855073" y="137.27678571428569"/>
+        </scene>
+    </scenes>
+</document>
